@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>CreditCenter | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        {% block login %}
+        {% endblock %}
+        {% block register %}
+        {% endblock %}
+        {% block register-profile %}
+        {% endblock %}
+
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>
