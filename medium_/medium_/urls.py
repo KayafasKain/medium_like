@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from auth_app import views as auth_views
+from post_app import views as post_views
 from django.conf.urls import include
+from django.contrib.auth.decorators import login_required
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
@@ -30,4 +32,9 @@ urlpatterns = [
     path('create_profile/<str:pk>', auth_views.create_profile, name='register-profile'),
     path('register/', auth_views.register, name='register'),
     path('oauth', include('social_django.urls', namespace='social')),
+    path('article_list/', post_views.article_post_list, name='article-list'),
+    path('own_article_list/', login_required(post_views.own_article_post_list), name='own-article-list'),
+    path('show_article/<str:pk>', post_views.show_single_article, name='show-article'),
+    path('create_article/', login_required(post_views.create_article), name='article-create'),
+    path('edit_article/', login_required(post_views.edit_article), name='article-edit'),
 ]
