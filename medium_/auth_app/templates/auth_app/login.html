@@ -1,7 +1,7 @@
-{% extends "auth_app/base.html" %}
+{% extends "global_templates/base.html" %}
 {% block title %} Log in {% endblock %}
 
-{% block login %}
+{% block body %}
     <form action="" method="POST">
         {% csrf_token %}
         {% for field in form%}

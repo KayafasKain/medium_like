@@ -1,6 +1,6 @@
-{% extends "auth_app/base.html" %}
+{% extends "global_templates/base.html" %}
 {% block title %} Register {% endblock %}
-{% block register %}
+{% block body %}
     <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
         {% for field in form%}

@@ -59,11 +59,11 @@ SOCIAL_AUTH_FACEBOOK_KEY = '283214525584061'
 SOCIAL_AUTH_FACEBOOK_SECRET = '45a1c95a1f39edf9d45cd43e5e1b690a'
 
 ROOT_URLCONF = 'medium_.urls'
-
+print(os.path.join(BASE_DIR, 'templates'))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'global_templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
