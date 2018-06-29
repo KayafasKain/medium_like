@@ -7,8 +7,7 @@ from .forms import ProfileEditForm
 from .utils.classifiers.numerical_classifier import NumericalClassifier as NC
 
 Profile = apps.get_model('profile_app', 'Profile')
-ClientClass = apps.get_model('profile_app', 'ClientClass')
-# Create your views here.
+
 class EditProfileView(FormView): #Work In Progress
     template_name = 'auth_app/register_profile.html'
     form_class = ProfileEditForm

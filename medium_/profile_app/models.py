@@ -7,7 +7,7 @@ from django.contrib.auth import (
 
 User = get_user_model()
 class Profile(models.Model):
-    phone_number = PhoneNumberField()
+    phone_number = PhoneNumberField(blank=True, null=True)
     about = models.CharField(blank=True, null=True, max_length=256)
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 

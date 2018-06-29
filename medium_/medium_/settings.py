@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
     'phonenumber_field',
+    'profile_app',
+    'auth_app',
 ]
 PHONENUMBER_DEFAULT_REGION = 'UA'
 MIDDLEWARE = [
@@ -48,7 +51,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '283214525584061'
+SOCIAL_AUTH_FACEBOOK_SECRET = '45a1c95a1f39edf9d45cd43e5e1b690a'
 
 ROOT_URLCONF = 'medium_.urls'
 
@@ -63,10 +70,20 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'medium_.wsgi.application'
 
