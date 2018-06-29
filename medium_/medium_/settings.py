@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'social_django',
     'phonenumber_field',
     'profile_app',
+    'post_app',
     'auth_app',
 ]
 PHONENUMBER_DEFAULT_REGION = 'UA'
