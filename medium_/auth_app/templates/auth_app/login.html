@@ -1,6 +1,5 @@
 {% extends "global_templates/base.html" %}
 {% block title %} Log in {% endblock %}
-
 {% block body %}
     <form action="" method="POST">
         {% csrf_token %}
@@ -18,6 +17,7 @@
             </div>
         {% endfor %}
         <input type="submit" value="submit">
+        <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
     </form>
-    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+
 {% endblock %}

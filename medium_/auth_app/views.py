@@ -28,7 +28,7 @@ class LoginView(FormView):
         user = authenticate( self.request, username=username, password=password)
         if user is not None:
             login(self.request, user)
-            return HttpResponseRedirect(reverse('create-loan'))
+            return HttpResponseRedirect(reverse('article-list'))
         redirect('/')
 
 login_view = LoginView.as_view()
@@ -62,7 +62,7 @@ class RegisterView(FormView):
 
 register = RegisterView.as_view()
 
-class CreateProfileView(FormView): #Work In Progress
+class CreateProfileView(FormView):
     template_name = 'auth_app/register_profile.html'
     form_class = ProfileRegisterForm
     context_name = 'register-profile'

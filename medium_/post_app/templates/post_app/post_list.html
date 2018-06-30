@@ -8,16 +8,25 @@
         <th>Status</th>
     </tr>
         {% for obj in object_list %}
-            <tr>
-                <th>{{ obj.title }}</th>
-                <th>{{ obj.description }}</th>
-                <th>{{ obj.status }}</th>
-                <th>
-                    <form action="{% url 'show-article' pk=obj.pk %}">
-                        <input type='submit' value='Read more' >
-                    </form>
-                </th>
-            </tr>
+            {% if obj.status == 'Live' or user == obj.user %}
+                <tr>
+                    <th>{{ obj.title }}</th>
+                    <th>{{ obj.description }}</th>
+                    <th>{{ obj.status }}</th>
+                    <th>
+                        <form action="{% url 'show-article' pk=obj.pk %}">
+                            <input type='submit' value='Read more' >
+                        </form>
+                    </th>
+                    <th>
+                        {%  if user == obj.user %}
+                            <form action="{% url 'article-edit' pk=obj.pk %}">
+                                <input type='submit' value='Edit article' >
+                            </form>
+                        {% endif %}
+                    </th>
+                </tr>
+            {% endif %}
         {% endfor %}
         {% if not object_list %}
             <p>You there is no articles</p>

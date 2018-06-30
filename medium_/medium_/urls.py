@@ -14,27 +14,31 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
 from django.urls import path
 from auth_app import views as auth_views
 from post_app import views as post_views
+from profile_app import views as profile_views
 from django.conf.urls import include
 from django.contrib.auth.decorators import login_required
+from django.conf.urls.static import static
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'home'
-
+#edit_profile
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('admin/', admin.site.urls),
+    path('', post_views.article_post_list, name='article-list'),
     path('login/', auth_views.login_view, name='login'),
     path('logout/', auth_views.logout_view, name='logout'),
     path('create_profile/<str:pk>', auth_views.create_profile, name='register-profile'),
     path('register/', auth_views.register, name='register'),
     path('oauth', include('social_django.urls', namespace='social')),
-    path('article_list/', post_views.article_post_list, name='article-list'),
     path('own_article_list/', login_required(post_views.own_article_post_list), name='own-article-list'),
     path('show_article/<str:pk>', post_views.show_single_article, name='show-article'),
     path('create_article/', login_required(post_views.create_article), name='article-create'),
-    path('edit_article/', login_required(post_views.edit_article), name='article-edit'),
-]
+    path('edit_article/<str:pk>', login_required(post_views.edit_article), name='article-edit'),
+    path('edit_profile/', login_required(profile_views.edit_profile), name='edit-profile'),
+    path('change_password/', login_required(profile_views.change_password), name='ch-password'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

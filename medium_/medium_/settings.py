@@ -137,3 +137,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT  = BASE_DIR + STATIC_URL
+STATICFILES_DIRS = [
+    BASE_DIR + '/auth_app/static/',
+    BASE_DIR + '/post_app/static/',
+    BASE_DIR + '/profile_app/static/',
+    BASE_DIR + '/static/main/',
+]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'manual': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+    	},
+	},
+
+}

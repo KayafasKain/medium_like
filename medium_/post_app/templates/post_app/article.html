@@ -2,10 +2,11 @@
 {% block title %} Article {% endblock %}
 
 {% block body %}
-        {% for obj in object_list %}
+
          <article>
-           <h3> {{ obj.title }} </h3>
-            <span>{{ obj.text }}</span>
+            <h3> {{ object.title }} </h3>
+            <span>{{ object.text }}</span>
+            <h5>author: {{ user.username }}</h5>
          </article>
 
 {% endblock %}

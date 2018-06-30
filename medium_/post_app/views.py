@@ -10,7 +10,7 @@ PostArticle = apps.get_model('post_app', 'PostArticle')
 Status = apps.get_model('post_app', 'Status')
 class ArticleList(ListView):
     model = PostArticle
-    template_name = 'post_app/loan_list.html'
+    template_name = 'post_app/post_list.html'
     context_object_name = 'article-list'
     paginate_by = 10
 
@@ -21,12 +21,12 @@ article_post_list = ArticleList.as_view()
 
 class OwnArticleList(ListView):
     model = PostArticle
-    template_name = 'post_app/loan_list.html'
+    template_name = 'post_app/post_list.html'
     context_object_name = 'own-article-list'
     paginate_by = 10
 
     def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
+        return PostArticle.objects.filter(user=self.request.user)
 
 own_article_post_list = OwnArticleList.as_view()
 
@@ -35,8 +35,8 @@ class ShowArticle(DetailView):
     template_name = 'post_app/article.html'
     context_object_name = 'show-article'
 
-    def get_queryset(self):
-        return self.model.objects.get(pk=self.kwargs['pk'])
+    # def get_queryset(self):
+    #     return PostArticle.objects.get(pk=self.kwargs['pk'])
 
 show_single_article = ShowArticle.as_view()
 
@@ -65,7 +65,7 @@ class EditArticle(FormView):
 
     def get_form_kwargs(self):
         kwargs = super(EditArticle, self).get_form_kwargs()
-        self.current_article = PostArticle.objects.get(user=self.request.user)
+        self.current_article = self.model.objects.get(pk=self.kwargs['pk'])
         kwargs.update({
             'article': self.current_article
         })
@@ -77,6 +77,7 @@ class EditArticle(FormView):
         article.description = form.cleaned_data['description']
         article.text = form.cleaned_data['text']
         article.category = form.cleaned_data['category']
+        article.status = Status.objects.get(name='Review')
         article.save()
         return redirect(reverse('own-article-list'))
 

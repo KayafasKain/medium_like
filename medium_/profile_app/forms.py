@@ -1,27 +1,47 @@
 from django import forms
 from django.apps import apps
+from django.contrib.auth import (
+    get_user_model,
+    authenticate,
+)
 
+User = get_user_model()
 Profile = apps.get_model('profile_app', 'Profile')
 
-BIRTH_YEAR_CHOICES = ( i for i in range(1900, 2000) )
-
 class ProfileEditForm(forms.ModelForm):
-    birth_date = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES))
 
     def __init__ (self, *args, **kwargs):
         profile = kwargs.pop('profile')
         super(ProfileEditForm, self).__init__(*args, **kwargs)
-        self.fields['income_yearly'].initial = profile.income_yearly
-        self.fields['employer_name'].initial = profile.employer_name
-        self.fields['birth_date'].initial = profile.birth_date
-        self.fields['employment_type'].initial = profile.employment_type
+        self.fields['phone_number'].initial = profile.phone_number
+        self.fields['about'].initial = profile.about
 
 
     class Meta:
         model = Profile
         fields = [
-            'income_yearly',
-            'employer_name',
-            'birth_date',
-            'employment_type',
+            'phone_number',
+            'about',
         ]
+
+class ChangePasswordForm(forms.Form):
+    password = forms.CharField(widget=forms.PasswordInput, required=True)
+    new_password = forms.CharField(widget=forms.PasswordInput, required=True)
+
+    class Meta:
+        model = User
+        fields = ['new_password', 'password']
+        error_messages = {
+            'password': {
+                'not_match': 'password not match',
+            },
+        }
+
+    def clean(self):
+        password = self.cleaned_data.get("password")
+        if password:
+            user_verify = authenticate(username=User.username, password=password)
+            if not user_verify:
+                raise forms.ValidationError({
+                    'password': self.Meta.error_messages['password']['not_match']
+                })

@@ -1,0 +1,19 @@
+h1 {
+    color:red;
+}
+nav {
+    display: flex;
+}
+nav form {
+    padding: 10px;
+}
+
+table {
+    border: collapsed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+

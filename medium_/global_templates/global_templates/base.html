@@ -3,10 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <title>MediumClone | {% block title %}{% endblock %}</title>
+    <title>MediumClone | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %} ">
 </head>
 <body>
-<h1>BDA BDA YA</h1>
+<header>
+    <nav>
+        {% include 'global_templates/pagination.html' %}
+    </nav>
+</header>
+<h1>Wellcome to medium-clone</h1>
     <div class="container">
 
         {% if error %}
