@@ -58,6 +58,12 @@ class RegisterView(FormView):
             user.set_password(form.cleaned_data['password'])
             user.save()
 
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate( self.request, username=username, password=password)
+        if user is not None:
+            login(self.request, user)
+
         return HttpResponseRedirect(reverse('register-profile', kwargs={'pk': str(user.pk)}))
 
 register = RegisterView.as_view()
