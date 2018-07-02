@@ -30,7 +30,6 @@ class ArticleTest(TestCase):
         Status.objects.create(name='Review')
         user = User.objects.create_user(**self.credentials)
         self.client.login(username=self.credentials['username'], password=self.credentials['password'])
-        self.cur_user = user
 
 
     def test_create_article_positive(self):
