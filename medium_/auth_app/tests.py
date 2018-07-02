@@ -22,6 +22,10 @@ class LogInTest(TestCase):
         response = self.client.post('/login/', self.credentials_negative, follow=True)
         self.assertFalse(response.context['user'].is_active)
 
+    def test_logout(self):
+        response = self.client.get('/logout/', follow=True)
+        self.assertFalse(response.context['user'].is_active)
+
 class RegisterTest(TestCase):
     def setUp(self):
         self.credentials_positive = {

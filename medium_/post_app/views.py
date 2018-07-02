@@ -6,8 +6,10 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import FormView
 from .forms import CreateArticleForm, ArticleEditForm
 
+
 PostArticle = apps.get_model('post_app', 'PostArticle')
 Status = apps.get_model('post_app', 'Status')
+
 class ArticleList(ListView):
     model = PostArticle
     template_name = 'post_app/post_list.html'
@@ -34,9 +36,6 @@ class ShowArticle(DetailView):
     model = PostArticle
     template_name = 'post_app/article.html'
     context_object_name = 'show-article'
-
-    # def get_queryset(self):
-    #     return PostArticle.objects.get(pk=self.kwargs['pk'])
 
 show_single_article = ShowArticle.as_view()
 
