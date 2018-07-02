@@ -157,11 +157,15 @@ LOGGING = {
         },
     },
     'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
         'manual': {
             'handlers': ['file'],
             'level': 'DEBUG',
             'propagate': True,
-    	},
-	},
-
+        },
+    },
 }

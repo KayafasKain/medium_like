@@ -5,6 +5,7 @@ from django.apps import apps
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import FormView
 from .forms import CreateArticleForm, ArticleEditForm
+import logging
 
 
 PostArticle = apps.get_model('post_app', 'PostArticle')
@@ -17,6 +18,7 @@ class ArticleList(ListView):
     paginate_by = 10
 
     def get_queryset(self):
+        print(logger)
         return self.model.objects.all()
 
 article_post_list = ArticleList.as_view()
