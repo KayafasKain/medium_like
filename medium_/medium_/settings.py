@@ -146,6 +146,8 @@ STATICFILES_DIRS = [
     BASE_DIR + '/static/main/',
 ]
 
+TELEGRAM_BOT_TOKEN = '566544130:AAFRtW9mQsarYGVo_-OjnB3Pn7La-i3NDwQ'
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

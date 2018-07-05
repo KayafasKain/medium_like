@@ -11,3 +11,7 @@ class Profile(models.Model):
     about = models.CharField(blank=True, null=True, max_length=256)
     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 
+class Telegramm(models.Model):
+    tele_id = models.CharField(blank=True, null=True, max_length=256)
+    code = models.CharField(blank=True, null=True, max_length=256)
+    user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)

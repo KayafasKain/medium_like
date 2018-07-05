@@ -8,6 +8,7 @@ from django.contrib.auth import (
 User = get_user_model()
 Profile = apps.get_model('profile_app', 'Profile')
 
+
 class ProfileEditForm(forms.ModelForm):
 
     def __init__ (self, *args, **kwargs):

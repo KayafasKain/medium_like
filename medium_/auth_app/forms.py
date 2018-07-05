@@ -60,6 +60,9 @@ class ProfileRegisterForm(forms.ModelForm):
             'about',
         ]
 
+class VerifyForm(forms.Form):
+    code = forms.CharField()
+
 class UserRegisterForm(forms.ModelForm):
     email = forms.EmailField(label='Email address')
     password = forms.CharField(widget=forms.PasswordInput)

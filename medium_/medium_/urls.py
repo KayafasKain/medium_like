@@ -41,4 +41,5 @@ urlpatterns = [
     path('edit_article/<str:pk>', login_required(post_views.edit_article), name='article-edit'),
     path('edit_profile/', login_required(profile_views.edit_profile), name='edit-profile'),
     path('change_password/', login_required(profile_views.change_password), name='ch-password'),
+    path('verify_code/<str:pk>', auth_views.verify_view, name='verify-code'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
