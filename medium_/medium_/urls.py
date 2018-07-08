@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.conf import settings
 from django.urls import path
 from auth_app import views as auth_views
+from auth_app import views_api as auth_views_api
 from post_app import views as post_views
+from post_app import views_api as post_views_api
 from profile_app import views as profile_views
 from django.conf.urls import include
 from django.contrib.auth.decorators import login_required
@@ -42,4 +44,9 @@ urlpatterns = [
     path('edit_profile/', login_required(profile_views.edit_profile), name='edit-profile'),
     path('change_password/', login_required(profile_views.change_password), name='ch-password'),
     path('verify_code/<str:pk>', auth_views.verify_view, name='verify-code'),
+    path('api/users/', auth_views_api.user_list, name='api-user-list'),
+    path('api/posts/', post_views_api.post_view, name='api-post'),
+    path('api/posts/<str:pk>', post_views_api.post_view, name='api-post'),
+    path('api/posts/categories/', post_views_api.category_view, name='api-category'),
+    path('api/posts/statuses/', post_views_api.status_view, name='api-status'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

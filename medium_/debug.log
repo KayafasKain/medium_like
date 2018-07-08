@@ -3519,3 +3519,785 @@ Traceback (most recent call last):
   File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
     return int(value)
 ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Not Found: /login/favicon.ico
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Internal Server Error: /show_article/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 105, in get
+    self.object = self.get_object()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Not Found: /login/favicon.ico
+Internal Server Error: /show_article/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 105, in get
+    self.object = self.get_object()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Not Found: /login/favicon.ico
+Internal Server Error: /show_article/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 105, in get
+    self.object = self.get_object()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Not Found: /login/favicon.ico
+Internal Server Error: /show_article/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 105, in get
+    self.object = self.get_object()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Not Found: /login/favicon.ico
+Internal Server Error: /show_article/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 105, in get
+    self.object = self.get_object()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Internal Server Error: /verify_code/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\edit.py", line 33, in get_form
+    return form_class(**self.get_form_kwargs())
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views.py", line 88, in get_form_kwargs
+    self.user = User.objects.get(pk=self.kwargs['pk'])
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'favicon.ico'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views_api.py", line 18, in get
+    return Response(serializer.data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 1097, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the UserSerializer serializer.",)
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\auth_app\views_api.py", line 18, in get
+    return Response(serializer.data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 1076, in get_field_names
+    'Got %s.' % type(fields).__name__
+TypeError: The `fields` option must be a list or tuple or "__all__". Got builtin_function_or_method.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'pk'
+Not Found: /api/posts/
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/1
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 25, in put
+    post = PostArticle.get_object(pk)
+AttributeError: type object 'PostArticle' has no attribute 'get_object'
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/1
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 26, in put
+    serializer = SnippetSerializer(post, data=request.data)
+NameError: name 'SnippetSerializer' is not defined
+Internal Server Error: /api/posts/1
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 33, in delete
+    post = PostArticle.get_object(pk)
+AttributeError: type object 'PostArticle' has no attribute 'get_object'
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: delete() missing 1 required positional argument: 'pk'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/2
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 37, in patch
+    return JsonReponse(code=201, data=serializer.data)
+NameError: name 'JsonReponse' is not defined
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/2
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'pk'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico

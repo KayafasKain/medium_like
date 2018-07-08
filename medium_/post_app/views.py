@@ -6,8 +6,6 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import FormView
 from .forms import CreateArticleForm, ArticleEditForm
 
-
-
 PostArticle = apps.get_model('post_app', 'PostArticle')
 Status = apps.get_model('post_app', 'Status')
 

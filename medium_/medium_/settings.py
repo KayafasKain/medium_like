@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'profile_app',
     'post_app',
     'auth_app',
+    'rest_framework',
 ]
 PHONENUMBER_DEFAULT_REGION = 'UA'
 MIDDLEWARE = [
