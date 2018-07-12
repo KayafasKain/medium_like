@@ -21,9 +21,23 @@ from auth_app import views_api as auth_views_api
 from post_app import views as post_views
 from post_app import views_api as post_views_api
 from profile_app import views as profile_views
-from django.conf.urls import include
 from django.contrib.auth.decorators import login_required
 from django.conf.urls.static import static
+from rest_framework.authtoken import views
+from django.conf.urls import url, include
+from rest_framework.routers import DefaultRouter
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='My API')
+
+
+router = DefaultRouter()
+router.register(r'categories', post_views_api.CategoryViewSet)
+router.register(r'statuses', post_views_api.StatusViewSet)
+router.register(r'posts', post_views_api.PostViewSet)
+router.register(r'users', auth_views_api.UserViewSet)
+
+
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
@@ -44,9 +58,12 @@ urlpatterns = [
     path('edit_profile/', login_required(profile_views.edit_profile), name='edit-profile'),
     path('change_password/', login_required(profile_views.change_password), name='ch-password'),
     path('verify_code/<str:pk>', auth_views.verify_view, name='verify-code'),
-    path('api/users/', auth_views_api.user_list, name='api-user-list'),
-    path('api/posts/', post_views_api.post_view, name='api-post'),
-    path('api/posts/<str:pk>', post_views_api.post_view, name='api-post'),
-    path('api/posts/categories/', post_views_api.category_view, name='api-category'),
-    path('api/posts/statuses/', post_views_api.status_view, name='api-status'),
+    url(r'api/api-token-auth', views.obtain_auth_token),
+    url(r'api/', schema_view),
+    url(r'api/', include(router.urls))
+    # path('api/users/', auth_views_api.user_list, name='api-user-list'),
+    # path('api/posts/', post_views_api.post_view, name='api-post'),
+    # path('api/posts/<str:pk>', post_views_api.post_view, name='api-post'),
+    # path('api/posts/categories/', post_views_api.category_view, name='api-category'),
+    # path('api/posts/statuses/', post_views_api.status_view, name='api-status'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

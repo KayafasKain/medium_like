@@ -1,4 +1,5 @@
 from django.apps import apps
+
 from django.contrib.auth import (
     get_user_model,
 )
@@ -8,65 +9,38 @@ from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework import generics
+from rest_framework import mixins
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 PostArticle = apps.get_model('post_app', 'PostArticle')
 Status = apps.get_model('post_app', 'Status')
 Categoty = apps.get_model('post_app', 'Category')
 
-class PostArticleView(APIView):
-    context_object_name = 'api-post'
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = PostArticle.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
-    def get(self, request, format=None):
-        posts = PostArticle.objects.all()
-        serializer = PostSerializer(posts, many=True)
-        return Response(serializer.data)
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if self.request.user.is_staff:
+            self.perform_destroy(instance)
 
-    def post(self, request, format=None):
-        serializer = PostSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def put(self, request, pk, format=None):
-        post = PostArticle.objects.get(pk=pk)
-        serializer = PostSerializer(post, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def patch(self, request, pk):
-        post = PostArticle.objects.get(pk=pk)
-        serializer = PostSerializer(post, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, pk, format=None):
-        post = PostArticle.objects.get(pk=pk)
-        post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-post_view = PostArticleView.as_view()
+    def perform_destroy(self, instance):
+        instance.delete()
 
-class StatusView(APIView):
-    context_object_name = 'api-status'
 
-    def get(self, request, format=None):
-        status = Status.objects.all()
-        serializer = StatusSerializer(status, many=True)
-        return Response(serializer.data)
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
-status_view = StatusView.as_view()
+class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Categoty.objects.all()
+    serializer_class = CategotySerializer
 
-class CategoryView(APIView):
-    context_object_name = 'api-category'
-
-    def get(self, request, format=None):
-        categories = Categoty.objects.all()
-        serializer = CategotySerializer(categories, many=True)
-        return Response(serializer.data)
-
-category_view = CategoryView.as_view()
+class StatusViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Status.objects.all()
+    serializer_class = StatusSerializer
