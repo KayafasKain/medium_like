@@ -59,8 +59,9 @@ urlpatterns = [
     path('change_password/', login_required(profile_views.change_password), name='ch-password'),
     path('verify_code/<str:pk>', auth_views.verify_view, name='verify-code'),
     url(r'api/api-token-auth', views.obtain_auth_token),
-    url(r'api/', schema_view),
-    url(r'api/', include(router.urls))
+    url(r'api/', include(router.urls)),
+    url(r'api/map/', schema_view),
+
     # path('api/users/', auth_views_api.user_list, name='api-user-list'),
     # path('api/posts/', post_views_api.post_view, name='api-post'),
     # path('api/posts/<str:pk>', post_views_api.post_view, name='api-post'),

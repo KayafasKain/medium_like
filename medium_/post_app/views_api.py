@@ -40,7 +40,9 @@ class PostViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Categoty.objects.all()
     serializer_class = CategotySerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class StatusViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Status.objects.all()
     serializer_class = StatusSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)
