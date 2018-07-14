@@ -24,6 +24,9 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     permission_classes = (IsOwnerOrReadOnly, IsStaffOrReadOnly )
 
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Categoty.objects.all()
     serializer_class = CategotySerializer
