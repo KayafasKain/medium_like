@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
+    'channels',
+    'page_main',
 ]
 PHONENUMBER_DEFAULT_REGION = 'UA'
 MIDDLEWARE = [
@@ -152,6 +154,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT  = BASE_DIR + STATIC_URL
 STATICFILES_DIRS = [
     BASE_DIR + '/auth_app/static/',
+    BASE_DIR + '/page_main/static/',
     BASE_DIR + '/post_app/static/',
     BASE_DIR + '/profile_app/static/',
     BASE_DIR + '/static/main/',
@@ -179,6 +182,16 @@ LOGGING = {
             'handlers': ['file'],
             'level': 'DEBUG',
             'propagate': True,
+        },
+    },
+}
+
+ASGI_APPLICATION = 'medium_.routing.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
         },
     },
 }

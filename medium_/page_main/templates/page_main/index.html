@@ -1,0 +1,40 @@
+{% extends "global_templates/base.html" %}
+{% block title %} Log in {% endblock %}
+{% block body %}
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<body>
+    <table id="winesFriends">
+    <tr>
+        <th>Title</th> <th>description</th>
+        <th>Text</th>
+    </tr>
+
+    </table>
+
+</body>
+<script>
+    var chatSocket = new WebSocket(
+        'ws://' + window.location.host +
+        '/ws/main/');
+    chatSocket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        var message = data['message'];
+        document.querySelector('#chat-log').value += (message + '\n');
+    };
+    $.getJSON('http://127.0.0.1:8000/api/posts/', function(data) {
+        var out = '';
+        console.log(data)
+        $.each(data, function(key, val) {
+            out += '<tr><th>' + val.title +'</th><th>'+val.description+'</th><th>'+val.text+'</th></tr>';
+        });
+
+        out += '';
+
+        $("#winesFriends").append( out );
+    });
+
+</script>
+{% endblock %}

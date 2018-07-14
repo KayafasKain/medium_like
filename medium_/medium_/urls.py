@@ -45,7 +45,8 @@ LOGIN_REDIRECT_URL = 'home'
 #edit_profile
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', post_views.article_post_list, name='article-list'),
+    #path('', post_views.article_post_list, name='article-list'),
+    url(r'', include('page_main.urls')),
     path('login/', auth_views.login_view, name='login'),
     path('logout/', auth_views.logout_view, name='logout'),
     path('create_profile/<str:pk>', auth_views.create_profile, name='register-profile'),
@@ -61,6 +62,7 @@ urlpatterns = [
     url(r'api/api-token-auth', views.obtain_auth_token),
     url(r'api/', include(router.urls)),
     url(r'api/map/', schema_view),
+
 
     # path('api/users/', auth_views_api.user_list, name='api-user-list'),
     # path('api/posts/', post_views_api.post_view, name='api-post'),
