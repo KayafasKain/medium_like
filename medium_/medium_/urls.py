@@ -45,8 +45,8 @@ LOGIN_REDIRECT_URL = 'home'
 #edit_profile
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', post_views.article_post_list, name='article-list'),
-    url(r'', include('page_main.urls')),
+    path('', post_views.article_post_list, name='article-list'),
+    url(r'main/', include('page_main.urls')),
     path('login/', auth_views.login_view, name='login'),
     path('logout/', auth_views.logout_view, name='logout'),
     path('create_profile/<str:pk>', auth_views.create_profile, name='register-profile'),

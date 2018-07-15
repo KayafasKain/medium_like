@@ -4,9 +4,9 @@ import page_main.routing as mp
 
 application = ProtocolTypeRouter({
     # (http->django views is added by default)
-    'websocket': AuthMiddlewareStack(
+    'websocket':
         URLRouter(
             mp.websocket_urlpatterns
         )
-    ),
+
 })

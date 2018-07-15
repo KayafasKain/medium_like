@@ -6,11 +6,16 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <body>
-    <table id="winesFriends">
-    <tr>
-        <th>Title</th> <th>description</th>
-        <th>Text</th>
-    </tr>
+    <table >
+        <thead>
+            <tr>
+                <th>Title</th> <th>description</th>
+                <th>Text</th>
+            </tr>
+        </thead>
+        <tbody id="winesFriends">
+
+        </tbody>
 
     </table>
 
@@ -21,9 +26,15 @@
         '/ws/main/');
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
-        var message = data['message'];
-        document.querySelector('#chat-log').value += (message + '\n');
+        var msg = data['message'];
+        console.log(msg)
+        $.getJSON('http://127.0.0.1:8000/api/posts/'+msg.message+'/', function(data) {
+            var out = '<tr><th>' + data.title +'</th><th>'+data.description+'</th><th>'+data.text+'</th></tr>';
+            $("#winesFriends").prepend( out );
+        });
+
     };
+
     $.getJSON('http://127.0.0.1:8000/api/posts/', function(data) {
         var out = '';
         console.log(data)

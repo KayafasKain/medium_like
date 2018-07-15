@@ -5380,3 +5380,1020 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 21, in create_post
+    MainConsumer.chat_message('gleck')
+TypeError: chat_message() missing 1 required positional argument: 'message'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 957, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `PostArticle.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `PostArticle.objects.create()`. You may need to make the field read-only, or override the PostSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 21, in create_post
+    MainConsumer.chat_message('gleck')
+TypeError: chat_message() missing 1 required positional argument: 'message'
+
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 21, in create_post
+    MainConsumer.send(text_data=json.dumps({
+NameError: name 'json' is not defined
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 22, in create_post
+    'message': "looolfgd456tre"
+TypeError: send() missing 1 required positional argument: 'self'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 957, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `PostArticle.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `PostArticle.objects.create()`. You may need to make the field read-only, or override the PostSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 22, in create_post
+    'message': "looolfgd456tre"
+TypeError: send() missing 1 required positional argument: 'self'
+
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 21, in create_post
+    con = MainConsumer()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels\generic\websocket.py", line 18, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'scope'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 957, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `PostArticle.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `PostArticle.objects.create()`. You may need to make the field read-only, or override the PostSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 21, in create_post
+    con = MainConsumer()
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels\generic\websocket.py", line 18, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'scope'
+
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 26, in create_post
+    Channel("main_channel").send({
+NameError: name 'Channel' is not defined
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 24, in create_post
+    channel_layer = get_channel_layer()
+NameError: name 'get_channel_layer' is not defined
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /main/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 30, in create_post
+    print(async_to_sync(channel_layer.chat_message)('main_channel'))
+AttributeError: 'RedisChannelLayer' object has no attribute 'chat_message'
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 30, in create_post
+    print(async_to_sync(channel_layer.chat_message)('main_channel'))
+AttributeError: 'RedisChannelLayer' object has no attribute 'chat_message'
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 30, in create_post
+    print(async_to_sync(channel_layer.recive)('main_channel'))
+AttributeError: 'RedisChannelLayer' object has no attribute 'recive'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 29, in create_post
+    async_to_sync(channel_layer.group_send)('main_channel', "{'type':'receive', 'message': 'lol'}")
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\asgiref\sync.py", line 64, in __call__
+    return call_result.result()
+  File "C:\Users\Bismarck\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\_base.py", line 405, in result
+    return self.__get_result()
+  File "C:\Users\Bismarck\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\_base.py", line 357, in __get_result
+    raise self._exception
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\asgiref\sync.py", line 78, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 317, in group_send
+    self._map_channel_to_connection(channel_names, message)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 361, in _map_channel_to_connection
+    message = dict(message.items())
+AttributeError: 'str' object has no attribute 'items'
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/posts/
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 23, in create_post
+    async_to_sync(channel_layer.group_send)('main_channel', {'type':'receive', 'message': PostArticle.objects.last()})
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\asgiref\sync.py", line 64, in __call__
+    return call_result.result()
+  File "C:\Users\Bismarck\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\_base.py", line 405, in result
+    return self.__get_result()
+  File "C:\Users\Bismarck\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\_base.py", line 357, in __get_result
+    raise self._exception
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\asgiref\sync.py", line 78, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 317, in group_send
+    self._map_channel_to_connection(channel_names, message)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 368, in _map_channel_to_connection
+    channel_to_message[channel] = self.serialize(message)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 386, in serialize
+    value = msgpack.packb(message, use_bin_type=True)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\msgpack\__init__.py", line 47, in packb
+    return Packer(**kwargs).pack(o)
+  File "msgpack\_packer.pyx", line 284, in msgpack._packer.Packer.pack
+  File "msgpack\_packer.pyx", line 290, in msgpack._packer.Packer.pack
+  File "msgpack\_packer.pyx", line 287, in msgpack._packer.Packer.pack
+  File "msgpack\_packer.pyx", line 234, in msgpack._packer.Packer._pack
+  File "msgpack\_packer.pyx", line 281, in msgpack._packer.Packer._pack
+TypeError: can't serialize <PostArticle: PostArticle object (68)>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\views_api.py", line 28, in perform_create
+    serializer.save(user=self.request.user)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 957, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `PostArticle.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `PostArticle.objects.create()`. You may need to make the field read-only, or override the PostSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in send
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\django\dispatch\dispatcher.py", line 178, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\medium_like\medium_\post_app\models.py", line 23, in create_post
+    async_to_sync(channel_layer.group_send)('main_channel', {'type':'receive', 'message': PostArticle.objects.last()})
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\asgiref\sync.py", line 64, in __call__
+    return call_result.result()
+  File "C:\Users\Bismarck\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\_base.py", line 405, in result
+    return self.__get_result()
+  File "C:\Users\Bismarck\AppData\Local\Programs\Python\Python36-32\lib\concurrent\futures\_base.py", line 357, in __get_result
+    raise self._exception
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\asgiref\sync.py", line 78, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 317, in group_send
+    self._map_channel_to_connection(channel_names, message)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 368, in _map_channel_to_connection
+    channel_to_message[channel] = self.serialize(message)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\channels_redis\core.py", line 386, in serialize
+    value = msgpack.packb(message, use_bin_type=True)
+  File "C:\Users\Bismarck\PycharmProjects\medium_like\venv\lib\site-packages\msgpack\__init__.py", line 47, in packb
+    return Packer(**kwargs).pack(o)
+  File "msgpack\_packer.pyx", line 284, in msgpack._packer.Packer.pack
+  File "msgpack\_packer.pyx", line 290, in msgpack._packer.Packer.pack
+  File "msgpack\_packer.pyx", line 287, in msgpack._packer.Packer.pack
+  File "msgpack\_packer.pyx", line 234, in msgpack._packer.Packer._pack
+  File "msgpack\_packer.pyx", line 281, in msgpack._packer.Packer._pack
+TypeError: can't serialize <PostArticle: PostArticle object (68)>
+
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/79/favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/posts/77/favicon.ico
